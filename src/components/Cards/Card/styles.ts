@@ -109,6 +109,8 @@ export const Card = styled.div<Props>`
   
   }
   .footer {
+    display: flex;
+    justify-content: space-between;
     background-color: ${props => props.randomColor};
     border-radius: 0 0 16px 16px;
     padding: 24px 16px 16px;

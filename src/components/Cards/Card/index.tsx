@@ -1,22 +1,23 @@
+import { IUser } from 'interfaces/IUser';
 import * as S from './styles';
 import { BiMailSend } from 'react-icons/bi';
 import { GrInstagram } from 'react-icons/gr';
 import { generateLorem } from 'utils/loremIpsum';
 import { generateRandomColor } from 'utils/randomColor';
 
-export const Card = (/*{ gender, name, location, email, login, dob, picture }: IUser*/) => {
+export const Card = ({ gender, name, location, email, login, dob, picture }: IUser) => {
 
   return (
-    <S.Card src='https://github.com/sucodelarangela.png' randomColor={generateRandomColor()}>
+    <S.Card src={picture.large} randomColor={generateRandomColor()}>
       <div className='header'>
         <span></span>
       </div>
       <div className="content">
-        <h2>Angela Caldas</h2>
-        <h3><GrInstagram size={18} />@sucodelarangela</h3>
+        <h2>{name.first} {name.last}</h2>
+        <h3><GrInstagram size={18} />@{login.username}</h3>
         <div className='info'>
-          <p><b>Gênero:</b> Feminino</p>
-          <p><b>Idade:</b> 32 anos</p>
+          <p><b>Gender:</b> {gender}</p>
+          <p><b>Age:</b> {dob.age} years old</p>
         </div>
         <div className='bio'>
           <h3>Bio</h3>
@@ -25,15 +26,14 @@ export const Card = (/*{ gender, name, location, email, login, dob, picture }: I
         </div>
         <a
           className='contact'
-          href="mailto:email@provedor.com.br"
+          href={`mailto:${email}`}
         >
           <BiMailSend size={24} />
-          email@provedor.com.br
+          {email}
         </a>
       </div>
       <div className='footer'>
-        <p><b>Cidade:</b> São Luís - MA</p>
-        <p><b>País:</b> Brasil</p>
+        <p><b>Where to find:</b> {location.city}, {location.country}.</p>
       </div>
     </S.Card>
   );
