@@ -2,7 +2,7 @@ import { GlobalStyles } from 'styles/globalStyles';
 import { useEffect, useState } from 'react';
 import { Users } from 'api/api';
 import { Header } from 'components/Header';
-import { Card } from 'components/Card';
+import { Cards } from 'components/Cards';
 import { IUser } from 'interfaces/IUser';
 import { UserProvider } from 'contexts/UserContext';
 
@@ -29,15 +29,11 @@ function App() {
       <>
         <GlobalStyles />
         <Header />
-        <section>
-          {loading && <p>Carregando usuários...</p>}
-          {error}
-          {users ? (
-            users.map(user => <Card key={user.email} />)
-          ) : ('')}
-        </section >
+        {loading && <p>Carregando usuários...</p>}
+        {error}
+        <Cards />
       </>
-    </UserProvider>
+    </UserProvider >
   );
 }
 

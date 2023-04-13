@@ -3,14 +3,14 @@ export interface IUser {
   name: Name;
   location: Location;
   email: string;
-  // login: Login;
+  login: Login;
   dob: Dob;
   // registered: Dob;
   // phone: string;
   // cell: string;
-  id: Id;
+  // id: Id;
   picture: Picture;
-  nat: string;
+  // nat: string;
 }
 
 interface Name {
@@ -43,25 +43,25 @@ interface Location {
 //   description: string;
 // }
 
-// interface Login {
-//   uuid: string;    
-//   username: string;
-//   password: string;
-//   salt: string;
-//   md5: string;
-//   sha1: string;
-//   sha256: string;
-// }
+interface Login {
+  // uuid: string;    
+  username: string;
+  // password: string;
+  // salt: string;
+  // md5: string;
+  // sha1: string;
+  // sha256: string;
+}
 
 interface Dob {
   // date: string;
   age: number;
 }
 
-interface Id {
-  // name: string;
-  value: string;
-}
+// interface Id {
+//   name: string;
+//   value: string;
+// }
 
 interface Picture {
   large: string;

@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-family: var(--opensans);
     color: inherit;
+    text-decoration: none;
     transition: 0.3s;
     scrollbar-width: thin;
     scrollbar-color: inherit inherit;
@@ -15,10 +16,9 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     /* Fonts */
     --opensans: 'Open Sans', sans-serif;
-    --heading-1: 700 3.6rem/4rem 'Open Sans', sans-serif;
-    --heading-2: 700 2.5rem/3rem 'Open Sans', sans-serif;
-    --heading-3: 700 2rem/2.5rem 'Open Sans', sans-serif;
-    --heading-4: 400 1.5rem/36px 'Open Sans', sans-serif;
+    --heading-1: 700 2rem/2.5rem 'Open Sans', sans-serif;
+    --heading-2: 700 1.5rem/36px 'Open Sans', sans-serif;
+    --heading-3: 700 1rem/1.5 'Open Sans', sans-serif;
     --paragraph: 400 1rem/1.5rem 'Open Sans', sans-serif;
 
     /* Colors */
@@ -37,5 +37,18 @@ export const GlobalStyles = createGlobalStyle`
 
   body::-webkit-scrollbar-thumb {
     background: inherit;
+  }
+
+  h2 {
+    font: var(--heading-2);
+  }
+
+  h3 {
+    font: var(--heading-3);
+  }
+
+  p {
+    font: var(--paragraph);
+    color: var(--dark-gray);
   }
 `;
