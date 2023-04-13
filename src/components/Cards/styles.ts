@@ -4,10 +4,18 @@ export const Cards = styled.section`
   width: 100%;
   max-width: 75rem;
   margin: 0 auto;
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 2rem;
-  margin: 0 4rem; */
-  /* max-width: 75rem; */
+
+  .my-masonry-grid {
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+    > div {
+      margin-bottom: 30px;
+    }
+  }
 `;
