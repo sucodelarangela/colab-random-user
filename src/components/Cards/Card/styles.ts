@@ -10,6 +10,7 @@ export const Card = styled.div<Props>`
   display: grid;
   grid-template-areas: 'header' 'content';
   height: fit-content;
+  box-shadow: 0 0 8px var(--purple);
 
   .header {
     grid-area: header;
@@ -34,7 +35,6 @@ export const Card = styled.div<Props>`
 
   .content {
     background-color: var(--gray);
-    border-radius: 8px;
     padding: 32px 16px 16px;
     h2 {
       color: var(--blue);
@@ -115,7 +115,10 @@ export const Card = styled.div<Props>`
     border-radius: 0 0 16px 16px;
     padding: 24px 16px 16px;
     p{
-      color: var(--gray);
+      background: inherit;
+      background-clip: text;
+      color: transparent;
+      filter: invert(1) grayscale(1) contrast(9);
     }
   }
 `;
