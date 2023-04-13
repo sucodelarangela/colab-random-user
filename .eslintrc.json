@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "env": {
     "browser": true,
     "es2021": true
@@ -17,14 +22,10 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-max-props-per-line": [
-      "enabled",
-      { "maximum": 2, "when": "string" }
-    ],
+    "react/jsx-max-props-per-line": [1, { "maximum": 2 }],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"]
   }
 }
-
