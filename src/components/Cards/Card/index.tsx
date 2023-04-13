@@ -22,7 +22,6 @@ export const Card = ({ gender, name, location, email, login, dob, picture }: IUs
         <div className='bio'>
           <h3>Bio</h3>
           <p>{generateLorem(1)}</p>
-          <p>{generateLorem(1)}</p>
         </div>
         <a
           className='contact'
