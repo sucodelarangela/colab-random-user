@@ -17,6 +17,6 @@ const requests = {
 // Objeto `Users` que usa o objeto `requests`para executar as operações de CRUD.
 // Se houvessem outras operações (post, put, delete, etc), elas também estariam dentro desse objeto.
 export const Users = {
-  // getUsers: (page: number): Promise<IUser[]> => requests.get(`?page=${page}&results=10&exc=registered,phone,cell,nat`)
-  getUsers: (): Promise<IUser[]> => requests.get('?results=20') // url teste sem paginação
+  getUsers: (page: number): Promise<IUser[]> => requests.get(`?page=${page}&results=10&exc=registered,phone,cell,nat`)
+  // getUsers: (): Promise<IUser[]> => requests.get('?results=20') // url teste sem paginação
 };

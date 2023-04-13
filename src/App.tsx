@@ -5,14 +5,16 @@ import { Header } from 'components/Header';
 import { Cards } from 'components/Cards';
 import { IUser } from 'interfaces/IUser';
 import { UserProvider } from 'contexts/UserContext';
+import { Loader } from 'components/Loader';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [users, setUsers] = useState<IUser[] | null>(null);
+  const [initialpage, setInitialPage] = useState(1);
 
   useEffect(() => {
-    Users.getUsers()
+    Users.getUsers(initialpage)
       .then(data => {
         setUsers(data);
         setLoading(false);
@@ -32,6 +34,7 @@ function App() {
         {loading && <p>Carregando usuários...</p>}
         {error}
         <Cards />
+        <Loader />
       </>
     </UserProvider >
   );
