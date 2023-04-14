@@ -116,6 +116,7 @@ export const Card = styled.div<Props>`
     padding: 24px 16px 16px;
     p{
       background: inherit;
+      -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       filter: invert(1) grayscale(1) contrast(9);
