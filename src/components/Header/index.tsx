@@ -15,7 +15,7 @@ export const Header = () => {
   return (
     <S.Header className={className}>
       <div>
-        <h1>Colab Random User</h1>
+        <h1 tabIndex={0}>Colab Random User</h1>
       </div>
     </S.Header>
   );

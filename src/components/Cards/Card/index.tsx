@@ -8,13 +8,18 @@ import { generateRandomColor } from 'utils/randomColor';
 export const Card = ({ gender, name, location, email, login, dob, picture }: IUser) => {
 
   return (
-    <S.Card src={picture.large} randomColor={generateRandomColor()}>
+    <S.Card
+      src={picture.large}
+      randomColor={generateRandomColor()}
+      tabIndex={0}
+      aria-label={`Card de ${name.first} ${name.last}`}
+    >
       <div className='header'>
         <span></span>
       </div>
       <div className="content">
         <h2>{name.first} {name.last}</h2>
-        <h3><GrInstagram size={18} />@{login.username}</h3>
+        <h3 aria-label={`Instagram ${login.username}`}><GrInstagram size={18} />@{login.username}</h3>
         <div className='info'>
           <p><b>Gender:</b> {gender}</p>
           <p><b>Age:</b> {dob.age} years old</p>
@@ -25,6 +30,7 @@ export const Card = ({ gender, name, location, email, login, dob, picture }: IUs
         </div>
         <a
           className='contact'
+          aria-label={`Enviar email para ${name.first}`}
           href={`mailto:${email}`}
         >
           <BiMailSend size={24} />
