@@ -6,7 +6,6 @@ import { generateLorem } from 'utils/loremIpsum';
 import { generateRandomColor } from 'utils/randomColor';
 
 export const Card = ({ gender, name, location, email, login, dob, picture }: IUser) => {
-
   return (
     <S.Card
       src={picture.large}

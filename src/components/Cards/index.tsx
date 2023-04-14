@@ -7,6 +7,7 @@ import Masonry from 'react-masonry-css';
 export const Cards = () => {
   const users = useUserContext();
 
+  // Breakpoints para responsividade dos cards
   const breakpoints = {
     default: 3,
     1200: 2,

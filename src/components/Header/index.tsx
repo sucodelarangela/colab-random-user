@@ -4,6 +4,7 @@ import { useState } from 'react';
 export const Header = () => {
   const [className, setClassName] = useState('');
 
+  // Mudar estilo do header após scroll da página
   window.addEventListener('scroll', () => {
     if (window.scrollY >= 100) {
       setClassName('rolling');
