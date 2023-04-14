@@ -15,8 +15,16 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [users, setUsers] = useState<IUser[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  console.log(currentPage);
-  console.log(users);
+  const [className, setClassName] = useState('');
+
+  // Mostrar botão backToTop apenas após scroll da página
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= 400) {
+      setClassName('rolling');
+    } else {
+      setClassName('');
+    }
+  });
 
   // Função para o get da lista de usuários
   const getUserList = (currentPage: number) => {
@@ -64,7 +72,7 @@ function App() {
         <RiRefreshFill size={24} />
         Load more
       </Button>
-      <Button className='backToTop' clickAction={backToTop}>
+      <Button className={`backToTop ${className}`} clickAction={backToTop}>
         <BsFillTriangleFill size={32} />
       </Button>
     </UserProvider >

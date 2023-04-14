@@ -25,14 +25,20 @@ export const Button = styled.button`
   }
 
   &.backToTop {
+    opacity: 0;
     position: fixed;
     right: 2.5rem;
     bottom: 2.5rem;
     background: var(--blue);
     border-radius: 50%;
     padding: 8px;
+    pointer-events: none;
     svg {
       fill: var(--gray);
+    }
+    &.rolling {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Cards = styled.section`
   width: 100%;
   max-width: 75rem;
-  margin: 0 auto;
+  margin: 6.75rem auto 0;
 
   .my-masonry-grid {
     display: flex;
