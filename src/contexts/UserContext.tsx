@@ -1,5 +1,5 @@
 import { IUser } from 'interfaces/IUser';
-import { ReactElement, createContext, useContext } from 'react';
+import { ReactNode, createContext, useContext } from 'react';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -7,7 +7,7 @@ const UserContext = createContext<IUser[] | null>();
 
 interface UserProviderProps {
   value: IUser[] | null;
-  children: ReactElement;
+  children: ReactNode;
 }
 
 export const UserProvider = ({ value, children }: UserProviderProps) => {

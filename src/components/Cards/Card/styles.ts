@@ -10,7 +10,7 @@ export const Card = styled.div<Props>`
   display: grid;
   grid-template-areas: 'header' 'content';
   height: fit-content;
-  box-shadow: 0 0 8px var(--purple);
+  box-shadow: 0 0 8px var(--blue);
 
   .header {
     grid-area: header;

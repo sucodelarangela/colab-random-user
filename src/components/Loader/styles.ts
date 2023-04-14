@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Loader = styled.div`
-  display: inline-block;
-  width: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   height: 50px;
   color: #3f51b5;
   animation: rotate-outer08 1.4s linear infinite;
