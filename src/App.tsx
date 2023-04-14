@@ -9,6 +9,7 @@ import { UserProvider } from 'contexts/UserContext';
 import { IUser } from 'interfaces/IUser';
 import { BsFillTriangleFill } from 'react-icons/bs';
 import { RiRefreshFill } from 'react-icons/ri';
+import { Footer } from 'components/Footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -75,6 +76,7 @@ function App() {
       <Button className={`backToTop ${className}`} clickAction={backToTop}>
         <BsFillTriangleFill size={32} />
       </Button>
+      <Footer />
     </UserProvider >
   );
 }
