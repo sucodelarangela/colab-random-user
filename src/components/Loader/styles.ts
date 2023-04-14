@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const Loader = styled.div`
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  display: block;
+  /* justify-content: center;
+  text-align: center; */
+  width: 50px;
   height: 50px;
+  margin: 0 auto;
   color: #3f51b5;
   animation: rotate-outer08 1.4s linear infinite;
 

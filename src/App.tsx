@@ -4,6 +4,7 @@ import { Users } from 'api/api';
 import { Header } from 'components/Header';
 import { Cards } from 'components/Cards';
 import { Loader } from 'components/Loader';
+import { Button } from 'components/Button';
 import { UserProvider } from 'contexts/UserContext';
 import { IUser } from 'interfaces/IUser';
 import { BsFillTriangleFill } from 'react-icons/bs';
@@ -14,9 +15,11 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [users, setUsers] = useState<IUser[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  console.log(currentPage);
+  console.log(users);
 
   // Função para o get da lista de usuários
-  const getUserList = () => {
+  const getUserList = (currentPage: number) => {
     Users.getUsers(currentPage)
       .then(data => {
         setUsers([...users, ...data]);
@@ -31,12 +34,12 @@ function App() {
 
   // Atualiza a lista no primeiro loading
   useEffect(() => {
-    getUserList();
+    getUserList(1);
   }, []);
 
   // Quando a paginação mudar, atualiza a lista com mais 9 usuários por vez
   useEffect(() => {
-    getUserList();
+    getUserList(currentPage);
   }, [currentPage]);
 
   const loadMore = () => {
@@ -57,13 +60,13 @@ function App() {
       {error}
       <Cards />
       {loading && <Loader />}
-      <button className='loadBtn' onClick={loadMore}>
+      <Button className='loadBtn' clickAction={loadMore}>
         <RiRefreshFill size={24} />
         Load more
-      </button>
-      <button className='backToTop' onClick={backToTop}>
+      </Button>
+      <Button className='backToTop' clickAction={backToTop}>
         <BsFillTriangleFill size={32} />
-      </button>
+      </Button>
     </UserProvider >
   );
 }

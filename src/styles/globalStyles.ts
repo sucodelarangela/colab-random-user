@@ -61,42 +61,4 @@ export const GlobalStyles = createGlobalStyle`
   p {
     color: var(--dark-gray);
   }
-
-  button {
-    border: none;
-    box-shadow: 0 0 16px var(--blue);
-    cursor: pointer;
-    &:hover {
-      box-shadow: 0 0 32px var(--blue);
-      background: var(--blue);
-    }
-  }
-  
-  .loadBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    color: var(--gray);
-    border-radius: 8px;
-    font: var(--heading-3);
-    margin: 24px auto;
-    width: fit-content;
-    padding: 8px 16px;
-    svg {
-      margin-right: 8px;
-    }
-  }
-
-  .backToTop {
-    position: fixed;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    background: var(--black);
-    border-radius: 50%;
-    padding: 8px;
-    svg {
-      fill: var(--gray);
-    }
-  }
 `;
