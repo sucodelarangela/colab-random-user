@@ -25,4 +25,12 @@ export const Header = styled.header<Props>`
     border-bottom: none;
     box-shadow: 0 1px 8px rgba(13, 21, 33, .8);
   }
+
+  @media screen and (max-width: 1280px) {
+    padding: 16px 32px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 16px 24px;
+  }
 `;

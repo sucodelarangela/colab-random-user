@@ -9,8 +9,8 @@ export const Cards = () => {
 
   const breakpoints = {
     default: 3,
-    // 1100: 2,
-    // 700: 1
+    1200: 2,
+    768: 1
   };
 
   return (
